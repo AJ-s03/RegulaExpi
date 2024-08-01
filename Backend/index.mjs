@@ -110,7 +110,7 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
 
 app.get("/api/Login/NavBar", (req, res) => {
 
-    console.log("out")
+    console.log(req.session.start);
     if (req.session.start == true) {
         console.log("in")
         return res.send(req.session.user);
