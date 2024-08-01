@@ -15,7 +15,7 @@ function Home() {
             e.target.style.transform = 'scale(1)'
         }, 80);
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/SetExpenses", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/SetExpenses", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/SetExpenses");
@@ -31,7 +31,7 @@ function Home() {
             e.target.style.transform = 'scale(1)'
         }, 80);
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Stock", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Stock", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/Stock", {state: result.data});
@@ -47,7 +47,7 @@ function Home() {
             e.target.style.transform = 'scale(1)'
         }, 80);
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Analytics", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Analytics", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/Analytics", {state: result.data} );
