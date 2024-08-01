@@ -109,7 +109,7 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
             console.log("Error saving session:", err);
          else 
             console.log("Session data saved successfully");
-    }
+    });
     return res.status(200).send({ user: req.session.user, session: req.session.start });
 });
 
