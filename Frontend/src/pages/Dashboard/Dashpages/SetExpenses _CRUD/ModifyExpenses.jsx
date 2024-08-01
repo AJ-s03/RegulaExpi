@@ -47,7 +47,7 @@ function ModifyExpenses(props) {
             if (location.state.session) {
                 const user = location.state.user;
 
-                axios.post("http://localhost:3000/api/Login/ModifyExpenses", { name, user, upi, amount, expense }, { withCredentials: true })
+                axios.post("https://regulaexpi-backend.onrender.com/api/Login/ModifyExpenses", { name, user, upi, amount, expense }, { withCredentials: true })
                     .then(result => {
                         if (result.data.charAt(0) === "E")
                             document.getElementById("Message").textContent = result.data;
