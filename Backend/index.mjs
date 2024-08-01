@@ -40,11 +40,12 @@ app.use(express.json());
 
 app.use(session({
     secret: 'lolz',
-    saveUninitialized: true,
-    resave: true,
+    saveUninitialized: false,
+    resave: false,
     cookie: {
         maxAge: (60000 * 60) * 3,
         secure: false,
+        sameSite: none,
     },
     store: MongoStore.create({
         client: mongoose.connection.getClient()
