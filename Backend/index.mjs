@@ -111,6 +111,7 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
     req.session.start = true;
     req.session.user = username;
+console.log(req.sessionID);
     req.session.save((err) => {
         if (err)
             console.log("Error saving session:", err);
@@ -126,7 +127,8 @@ app.get("/api/Login/NavBar"  ,(req, res) => {
       console.log("session reloaded");
 })
     console.log(req.session);
-    
+    console.log(req.sessionID);
+
     if (req.session.start == true) {
         return res.send(req.session.user);
     }
