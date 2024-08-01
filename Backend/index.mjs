@@ -47,8 +47,6 @@ app.use(session({
         secure: false,
         sameSite: 'none',
         httpOnly: false,
-        user : "1",
-        start : "2",
     },
     store: MongoStore.create({
         client: mongoose.connection.getClient()
@@ -111,8 +109,8 @@ app.listen(PORT, () => {
 
 app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
-    req.session.cookie.start = true;
-    req.session.cookie.user = username;
+    req.session.start = true;
+    req.session.user = username;
     req.session.save((err) => {
         if (err)
             console.log("Error saving session:", err);
@@ -124,6 +122,9 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
 
 app.get("/api/Login/NavBar"  ,(req, res) => {
 
+    req.session.reload(function(err){
+      console.log("session reloaded");
+})
     console.log(req.session);
     
     if (req.session.start == true) {
