@@ -111,8 +111,8 @@ app.listen(PORT, () => {
 
 app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
-    req.session.start = true;
-    req.session.user = username;
+    req.session.cookie.start = true;
+    req.session.cookie.user = username;
     req.session.save((err) => {
         if (err)
             console.log("Error saving session:", err);
