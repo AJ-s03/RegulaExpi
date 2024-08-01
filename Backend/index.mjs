@@ -99,7 +99,7 @@ app.listen(PORT, () => {
 
 
 
-app.post("/api/Login", passport.authenticate("local"), (req, res) => {
+app.get("/api/Login", passport.authenticate("local"), (req, res) => {
 
     const { username } = req.body;
     req.session.start = true;
