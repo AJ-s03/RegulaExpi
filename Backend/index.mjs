@@ -123,7 +123,7 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
 
 app.get("/api/Login/NavBar"  ,(req, res) => {
 
-    console.log(req.session);
+    console.log(num);
     
     if (req.session.start == true) {
         return res.send(req.session.user);
@@ -135,7 +135,6 @@ app.get("/api/Login/NavBar"  ,(req, res) => {
 
 app.get("/api/Login/SetExpenses", (req, res) => {
 
-    console.log(num);
     if (req.session.start == true) {
         return res.status(200).send("OK");
     }
