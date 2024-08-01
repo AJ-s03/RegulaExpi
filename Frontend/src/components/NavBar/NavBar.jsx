@@ -36,7 +36,7 @@ function NavBar() {
         {/* <h1>RegulaExpi</h1> */}
         <ul className={NavStyles.Nav_ul}>
           <li className={NavStyles.Nav_ul_li}><Link to="/Home" style={{ textDecoration: 'none' }} >Home</Link></li>
-          <li className={NavStyles.Nav_ul_li}><Link to="/Dashboard/*" onClick={handleDash}  style={{ textDecoration: 'none' }} >Dashboard</Link></li>
+          <li className={NavStyles.Nav_ul_li}><Link to="/Dashboard/*"   style={{ textDecoration: 'none' }} >Dashboard</Link></li>
           <li className={NavStyles.Nav_ul_li}><Link to="/About" style={{ textDecoration: 'none' }}>About</Link></li>
         </ul>
 
