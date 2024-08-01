@@ -27,7 +27,7 @@ mongoose.connect(mongo_uri)
         console.error('Error connecting to the database:', err));
 
 
-const corsOrigin = "http://localhost:5173";
+const corsOrigin = "https://regulaexpi-frontend.onrender.com";
 
 app.use(cors({
     origin: corsOrigin,
