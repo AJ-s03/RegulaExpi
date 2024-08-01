@@ -19,6 +19,7 @@ function NavBar() {
     e.preventDefault();
     axios.get("https://regulaexpi-backend.onrender.com/api/Login/NavBar",{withCredentials: true})
         .then(result => {
+            console.log(result.data);
             if (result.data)
               navigate("/Dashboard");
             else 
