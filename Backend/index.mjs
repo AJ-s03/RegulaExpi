@@ -104,7 +104,6 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
     req.session.start = true;
     req.session.user = username;
-    console.log(req.session.user);
     return res.status(200).send({ user: req.session.user, session: req.session.start });
 });
 
