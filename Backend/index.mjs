@@ -15,7 +15,6 @@ import bcrypt from "bcrypt";
 
 import cors from 'cors'
 
-let num = 1;
 
 const app = express();
 
@@ -113,7 +112,6 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
     req.session.start = true;
     req.session.user = username;
-    num = 2;
     req.session.save((err) => {
         if (err)
             console.log("Error saving session:", err);
@@ -125,7 +123,7 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
 
 app.get("/api/Login/NavBar"  ,(req, res) => {
 
-    console.log(num);
+    console.log(req.session);
     
     if (req.session.start == true) {
         return res.send(req.session.user);
