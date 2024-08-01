@@ -28,7 +28,7 @@ function InsiderDash(props) {
     const handleAdd = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Add", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Add", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/AddExpenses", {state: result.data});
@@ -41,7 +41,7 @@ function InsiderDash(props) {
     const handleDelete = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/delete", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/delete", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/DeleteExpenses", {state: result.data});
@@ -54,7 +54,7 @@ function InsiderDash(props) {
     const handleModify = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Modify", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Modify", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/ModifyExpenses", {state: result.data});
@@ -67,7 +67,7 @@ function InsiderDash(props) {
     const handleCheck = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Check", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Check", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/CheckExpenses", {state: result.data});
