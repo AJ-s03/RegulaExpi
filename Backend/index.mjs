@@ -29,11 +29,12 @@ mongoose.connect(mongo_uri)
 
 const corsOrigin = "https://regulaexpi-frontend.onrender.com";
 
-app.use(cors({
-    origin: corsOrigin,
-    credentials: true,
-}
-));
+// app.use(cors({
+//     origin: corsOrigin,
+//     credentials: true,
+// }
+// ));
+app.use(cors());
 
 app.use(express.json());
 
