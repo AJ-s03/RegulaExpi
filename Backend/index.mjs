@@ -104,7 +104,6 @@ app.listen(PORT, () => {
 
 
 app.post("/api/Login", passport.authenticate("local"), (req, res) => {
-    console.log('!');
     const { username } = req.body;
     req.session.start = true;
     req.session.user = username;
@@ -119,7 +118,7 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
 
 app.get("/api/Login/NavBar"  ,(req, res) => {
 
-
+    console.log(req.session);
     
     if (req.session.start == true) {
         return res.send(req.session.user);
