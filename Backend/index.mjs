@@ -104,20 +104,19 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
     req.session.start = true;
     req.session.user = username;
-    req.session.save((err) => {
-        if (err)
-            console.log("Error saving session:", err);
-         else 
-            console.log("Session data saved successfully");
-    });
+    // req.session.save((err) => {
+    //     if (err)
+    //         console.log("Error saving session:", err);
+    //      else 
+    //         console.log("Session data saved successfully");
+    // });
     return res.status(200).send({ user: req.session.user, session: req.session.start });
 });
 
 app.get("/api/Login/NavBar", (req, res) => {
 
-    console.log(req.session.user);
+
     if (req.session.start == true) {
-           console.log('!!');
         return res.send(req.session.user);
     }
     else
@@ -430,7 +429,7 @@ app.post("/api/Login/AddFeed", async (req, res) => {
 
 app.get("/api/Login/Logout", (req, res) => {
 
-    // if (req.session.start === true) {
+     if (req.session.start === true) {
         req.session.start == false;
         req.session.save((err) => {
         if (err)
@@ -440,9 +439,9 @@ app.get("/api/Login/Logout", (req, res) => {
         });
         req.session.destroy();
         return res.status(200).send("OK");
-    // }
-    // else
-        // return res.send(false);
+     }
+     else
+         return res.send(false);
 
 })
 
