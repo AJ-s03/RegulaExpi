@@ -18,7 +18,7 @@ function Login() {
         const username = document.getElementById("usernameauth").value;
         const password = document.getElementById("passwordauth").value;
         e.preventDefault();
-        axios.post("https://regulaexpi-backend.onrender.com/api/Login", { username, password }, {withCredentials: true})
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login", { username, password }, {withCredentials: true})
             .then(result => {
                 if(result.data.session)
                     navigate("/Home");
