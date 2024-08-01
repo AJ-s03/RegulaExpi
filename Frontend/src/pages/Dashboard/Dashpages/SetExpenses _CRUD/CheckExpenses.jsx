@@ -26,7 +26,7 @@ function CheckExpenses(props) {
         try {
             if (location.state.session) {
                 const user = location.state.user;
-                axios.post("http://localhost:3000/api/Login/CheckExpenses", { name, user}, { withCredentials: true })
+                axios.post("https://regulaexpi-backend.onrender.com/api/Login/CheckExpenses", { name, user}, { withCredentials: true })
                     .then(result => {
                         if (typeof(result.data) == "string")
                             document.getElementById("Message").textContent = result.data;
