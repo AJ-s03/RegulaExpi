@@ -47,12 +47,13 @@ app.use(session({
         secure: false,
         sameSite: 'none',
         httpOnly: false,
+        user : "1",
+        start : "2",
     },
     store: MongoStore.create({
         client: mongoose.connection.getClient()
     }),
-    user : "",
-    start : ""
+    
     
 })
 );
