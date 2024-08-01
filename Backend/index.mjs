@@ -51,7 +51,9 @@ app.use(session({
     },
     store: MongoStore.create({
         client: mongoose.connection.getClient()
-    })
+    }),
+    user : "",
+    start : ""
     
 })
 );
