@@ -1,0 +1,159 @@
+body {
+  background-color: rgba(183, 201, 219, 0.214);
+}
+
+.Nav {
+  display: flex;
+  height: auto;
+  width: 100%;
+  color: black;
+  justify-content: space-between;
+  background-color:white;
+  font-family:'Courier New', Courier, monospace;
+  border-radius: 10px 10px 10px 10px;
+  /* box-shadow: 5px 5px 5px 5px rgb(255, 255, 255); */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  margin: 0;
+  position: fixed;
+  z-index: 4;
+  backdrop-filter: blur(10px);
+  
+}
+
+ h1 {
+  padding: 1%;
+  margin: 0%;
+}
+
+
+
+.NAV_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: black;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px; 
+    
+  }
+  
+  .Nav_ul_li {
+    /* border-radius: 10px; */
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 16px;
+    text-decoration-line:none;
+  }
+  
+  .Nav_ul_li:hover {
+    /* background-color: #111111; */
+    background-color: #4999fa;
+    border-radius: 20px;
+    color: black;
+    animation: glow .2s 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    
+    
+  }
+/* 
+ul:hover{
+  transition: 2s;
+} */
+
+
+/* @keyframes glow {
+
+  0%{
+    box-shadow: none;
+  }
+
+  50%{
+    box-shadow: 1px 1px  1px 1px #4999fa;
+  }
+
+  100%{
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #4999fa;
+  }    
+} */
+
+/* Dropdown container */
+.dropdown {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  margin-right: 80px;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  left: 0;
+  
+  
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  left: 0;
+  box-shadow: none;
+}
+
+.dropbtn:hover {
+  background-color: #4999fa;
+  border-radius: 10px;
+}
+
+/* Dropdown_content (hidden by default) */
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 1;
+  left: 0;
+  
+  box-shadow: 10px rgba(0,0,0,0.2);
+}
+
+
+
+
+/* Links inside the dropdown */
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  left: 0;
+  border-radius: 10px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown_content a:hover {
+  background-color: #4999fa;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+/* Position dropdown button */
+.dropbtn {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown{
+    margin-right: 10vw;
+  }
+}
