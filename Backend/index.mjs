@@ -123,9 +123,7 @@ console.log(req.sessionID);
 
 app.get("/api/Login/NavBar"  ,(req, res) => {
 
-    req.session.reload(function(err){
-      console.log("session reloaded");
-})
+    
     console.log(req.session);
     console.log(req.sessionID);
 
