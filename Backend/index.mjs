@@ -104,15 +104,15 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
     req.session.start = true;
     req.session.user = username;
-    console.log("Logged in");
+    console.log(req.session.username);
     return res.status(200).send({ user: req.session.user, session: req.session.start });
 });
 
 app.get("/api/Login/NavBar", (req, res) => {
 
-    console.log(req.session.start);
+    
     if (req.session.start == true) {
-        console.log("in")
+  
         return res.send(req.session.user);
     }
     else
