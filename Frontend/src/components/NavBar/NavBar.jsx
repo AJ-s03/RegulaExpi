@@ -17,7 +17,7 @@ function NavBar() {
   const handleDash = (e) => {
 
     e.preventDefault();
-    axios.get("http://localhost:3000/api/Login/NavBar",{withCredentials: true})
+    axios.get("https://regulaexpi-backend.onrender.com/api/Login/NavBar",{withCredentials: true})
         .then(result => {
             if (result.data)
               navigate("/Dashboard");
