@@ -33,7 +33,7 @@ function Feedback(props) {
     const handleAddFeed = (e) => {
         e.preventDefault();
         const feed = document.getElementById("feed").value;
-        axios.post("http://localhost:3000/api/Login/AddFeed", { feed }, { withCredentials: true }).then(result => {
+        axios.post("https://regulaexpi-backend.onrender.com/api/Login/AddFeed", { feed }, { withCredentials: true }).then(result => {
 
             document.getElementById("Message").textContent = result.data;
 
