@@ -62,7 +62,7 @@ function Sign_up() {
                                 Email
 
                                 <br />
-                                <input type="email" id="email" />
+                                <input type="email" id="email"/>
                             </div>
                             <br />
                             <div className={SignupStyles.Smallmain} >
