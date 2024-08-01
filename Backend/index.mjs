@@ -101,14 +101,6 @@ app.listen(PORT, () => {
     console.log(`Running on ${PORT}`);
 })
 
-const isAuth = (req, res, next) => {
-    if (req.session.start){   
-        console.log("!");
-        next();
-    }
-    else
-        console.log("X");
-};
 
 
 app.post("/api/Login", passport.authenticate("local"), (req, res) => {
@@ -128,12 +120,12 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
 app.get("/api/Login/NavBar", isAuth()  ,(req, res) => {
 
 
-    return res.send(true);
-    // if (req.session.start == true) {
-    //     return res.send(req.session.user);
-    // }
-    // else
-    //     return res.send(false);
+    
+    if (req.session.start == true) {
+        return res.send(req.session.user);
+    }
+    else
+        return res.send(false);
 
 })
 
