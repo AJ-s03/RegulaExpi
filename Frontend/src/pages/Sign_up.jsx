@@ -24,7 +24,7 @@ function Sign_up() {
         const password = document.getElementById("password").value;
         const cpassword = document.getElementById("cpassword").value;
         e.preventDefault();
-        axios.post('http://localhost:3000/api/Signup', { email, username, password, cpassword },{withCredentials: true})
+        axios.post('https://regulaexpi-backend.onrender.com/api/Signup', { email, username, password, cpassword },{withCredentials: true})
             .then(result => {
                 if (result.data === 'login')
                     navigate('/login');
