@@ -35,7 +35,7 @@ function Analytics(props) {
             if (location.state.session) {
                 const user = location.state.user;
 
-                axios.post("http://localhost:3000/api/Login/Chart", { user }, { withCredentials: true })
+                axios.post("https://regulaexpi-backend.onrender.com/api/Login/Chart", { user }, { withCredentials: true })
                     .then(result => {
 
                         if (typeof (result.data) == "string")
