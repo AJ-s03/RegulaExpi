@@ -430,13 +430,13 @@ app.post("/api/Login/AddFeed", async (req, res) => {
 
 app.get("/api/Login/Logout", (req, res) => {
 
-    if (req.session.start === true) {
+    // if (req.session.start === true) {
         req.session.start == false;
         req.session.destroy();
         return res.status(200).send("OK");
-    }
-    else
-        return res.send(false);
+    // }
+    // else
+        // return res.send(false);
 
 })
 
