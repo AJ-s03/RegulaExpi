@@ -19,7 +19,7 @@ function Dashboard(props) {
     const handleSetExpenses = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/SetExpenses", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/SetExpenses", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/SetExpenses");
@@ -32,7 +32,7 @@ function Dashboard(props) {
     const handlePayment = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Payment", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Payment", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/Payment");
@@ -45,7 +45,7 @@ function Dashboard(props) {
     const handleStock = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Stock", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Stock", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/Stock", {state: result.data});
@@ -58,7 +58,7 @@ function Dashboard(props) {
     const handleAnalytics = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Analytics", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Analytics", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/Analytics", {state: result.data} );
@@ -71,7 +71,7 @@ function Dashboard(props) {
     const handleFeedback = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Feedback", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Feedback", { withCredentials: true })
             .then(result => {
                 if (result.data)
                     navigate("/Feedback", {state: result.data});
@@ -84,7 +84,7 @@ function Dashboard(props) {
     const handleLogout = (e) => {
 
         e.preventDefault();
-        axios.get("http://localhost:3000/api/Login/Logout", { withCredentials: true })
+        axios.get("https://regulaexpi-backend.onrender.com/api/Login/Logout", { withCredentials: true })
             .then(result => {
                 if (result.data){
                     console.log("logged out succesfully");
