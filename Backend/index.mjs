@@ -55,6 +55,8 @@ app.use(session({
 })
 );
 
+app.set('trust proxy', true);
+
 passport.serializeUser((user, done) => {
 
     done(null, user.id);
