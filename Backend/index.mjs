@@ -104,6 +104,12 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
     req.session.start = true;
     req.session.user = username;
+    req.session.save((err) => {
+        if (err)
+            console.log("Error saving session:", err);
+         else 
+            console.log("Session data saved successfully");
+    }
     return res.status(200).send({ user: req.session.user, session: req.session.start });
 });
 
