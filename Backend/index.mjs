@@ -124,8 +124,7 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
 
 app.get("/api/Login/NavBar"  ,(req, res) => {
 
-    
-    console.log(req.session);
+    
 
     if (req.session.start == true) {
         return res.send(req.session.user);
@@ -446,7 +445,7 @@ app.get("/api/Login/Logout", (req, res) => {
         if (err)
             console.log("Error saving session:", err);
          else 
-            console.log("Session data saved successfully");
+            console.log("logged out successfully ");
         });
         req.session.destroy();
         return res.status(200).send("OK");
