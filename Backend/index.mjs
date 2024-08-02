@@ -42,11 +42,12 @@ app.use(session({
     secret: 'lolz',
     saveUninitialized: false,
     resave: false,
+    proxy: true,
     cookie: {
         maxAge: (60000 * 60) * 3,
-        secure: false,
+        secure: true,
         sameSite: 'none',
-        httpOnly: false,
+        httpOnly: true,
     },
     store: MongoStore.create({
         client: mongoose.connection.getClient()
@@ -56,6 +57,7 @@ app.use(session({
 })
 );
 
+app.enable('trust proxy');
 app.set('trust proxy', true);
 
 passport.serializeUser((user, done) => {
@@ -111,7 +113,6 @@ app.post("/api/Login", passport.authenticate("local"), (req, res) => {
     const { username } = req.body;
     req.session.start = true;
     req.session.user = username;
-console.log(req.sessionID);
     req.session.save((err) => {
         if (err)
             console.log("Error saving session:", err);
@@ -124,8 +125,7 @@ console.log(req.sessionID);
 app.get("/api/Login/NavBar"  ,(req, res) => {
 
     
-    console.log(req.session);
-    console.log(req.sessionID);
+    console.log(req.session);
 
     if (req.session.start == true) {
         return res.send(req.session.user);
