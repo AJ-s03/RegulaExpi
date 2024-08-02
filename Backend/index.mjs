@@ -440,7 +440,7 @@ app.post("/api/Login/AddFeed", async (req, res) => {
 app.get("/api/Login/Logout", (req, res) => {
 
      if (req.session.start === true) {
-        req.session.start == false;
+        req.session.start = false;
         req.session.save((err) => {
         if (err)
             console.log("Error saving session:", err);
