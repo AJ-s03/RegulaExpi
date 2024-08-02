@@ -79,7 +79,9 @@ passport.deserializeUser(async (id, done) => {
 passport.use(
     new Strategy(async (username, password, done) => {
         try {
+            console.log(username);
             const findUser = await User.findOne({ username });
+            console.log(findUser);
             if (!findUser) throw new Error("User not found");
 
             const isMatch = await bcrypt.compareSync(password, findUser.password);
