@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 100">
-  <text x="20" y="70" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="purple">
+  <text x="20" y="70" font-family="monospace" font-size="100" font-weight="bold" fill="blue">
     R
   </text>
-  <text x="60" y="70" font-family="Arial, sans-serif" font-size="70" font-weight="bold" fill="orange" letter-spacing="-10">
+  <text x="60" y="70" font-family="monospace" font-size="90" font-weight="bold" fill="black" letter-spacing="-10">
     EX
   </text>
 </svg>
