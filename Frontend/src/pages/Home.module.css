@@ -1,0 +1,37 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Home {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    flex-flow: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    text-wrap: pretty;
+    
+}
+
+.CardPlain{
+    display: flex;
+    justify-content: center;
+}
+
+.Welcard {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    /* box-shadow: 5px 5px 5px 5px rgb(255, 255, 255); */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+@media screen and (max-width: 768px) {
+   
+    .CardPlain{
+       flex-direction: column;
+       justify-content: center;
+    }
+}

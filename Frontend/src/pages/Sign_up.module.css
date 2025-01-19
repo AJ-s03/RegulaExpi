@@ -1,0 +1,130 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.Page {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    justify-content: center;
+}
+
+.DashAside{
+    width: 10vw;
+    height: 100vh;
+}
+
+
+.Main{
+    display: grid;
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    text-align: left;
+    justify-content: left;
+    padding-left: 20px;
+    width: 40vw;    
+    height: 100%;
+    padding-left: 5%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    z-index: 1;
+    padding-top: 1%;
+
+}
+
+.Smallmain{
+    background-color: aliceblue;
+    text-align: left;
+    justify-content: left;
+    padding-left: 20px;
+    width: inherit;    
+    height: auto;
+    padding-left: 5%;
+    box-shadow: -8px 13px 14px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    z-index: 1;
+    padding-top: 1%;
+
+}
+
+.Smallmain:hover{
+    box-shadow: 0px;
+}
+
+.Back{
+
+    background-color: rgb(0, 0, 115);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+ 
+}
+
+
+.form_container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: 100%;
+}
+
+.form_container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form_group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form_group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form_group input[type="text"]{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.form_group button {
+    background-color: rgb(0, 0, 115);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+}
+
+.Back:hover {
+    background-color: #4972fa;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+input{
+    margin: 5px;
+    border: none;
+}
+
+pre{
+    color: rgb(0, 0, 115);
+    font-family: 'Courier New', Courier, monospace;
+}
