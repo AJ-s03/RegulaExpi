@@ -7,7 +7,7 @@ import Dash from "../../../../components/Dash/Dash"
 import DashStyles from "../../../../components/Dash/Dash.module.css"
 import axios from "axios";
 import Card from "../../../../components/Card/Card"
-import { loadStripe } from '@stripe/stripe-js'
+import { loadStripe } from './@stripe/stripe-js'
 // import 'dotenv/config';
 
 // const stripe_key = process.env.STRIPE_PUB;
